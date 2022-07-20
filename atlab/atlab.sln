@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atlab", "atlab\atlab.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtLabMSTest", "AtLabMSTest\AtLabMSTest.csproj", "{36DFC93F-81D3-4A25-A925-CF5B515FF679}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtLabNUnitTest", "AtLabNUnitTest\AtLabNUnitTest.csproj", "{BC3C18B7-7C53-4E67-864B-827DBB425A26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3C18B7-7C53-4E67-864B-827DBB425A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3C18B7-7C53-4E67-864B-827DBB425A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3C18B7-7C53-4E67-864B-827DBB425A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3C18B7-7C53-4E67-864B-827DBB425A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
