@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atlab", "atlab\atlab.csproj", "{7B9D1351-DF6D-421E-BB2E-0CA2CA3E2569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtLabMSTest", "AtLabMSTest\AtLabMSTest.csproj", "{36DFC93F-81D3-4A25-A925-CF5B515FF679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B9D1351-DF6D-421E-BB2E-0CA2CA3E2569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9D1351-DF6D-421E-BB2E-0CA2CA3E2569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9D1351-DF6D-421E-BB2E-0CA2CA3E2569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9D1351-DF6D-421E-BB2E-0CA2CA3E2569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DFC93F-81D3-4A25-A925-CF5B515FF679}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {113C5596-69CD-41C7-8993-AB02BE886F53}
+	EndGlobalSection
+EndGlobal

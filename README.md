@@ -2,8 +2,6 @@
 - Code twice deploy once :D
 
 
-# E-commerce Masonry #
-
 ## What I've learned ##
 
 - Automated testing basically means we write code to test the actual code of our application automatically, meaning we end up with Prod\Dev  Code and Testing Code;
