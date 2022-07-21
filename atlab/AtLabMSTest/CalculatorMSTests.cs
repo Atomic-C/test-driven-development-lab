@@ -14,12 +14,12 @@ namespace AtLabMSTest
         [TestMethod]
         public void Sum_InputTwoInt_GetCorrectAdition()
         {
-            // Arranje
+            // Arrange
             Calculator calculator = new Calculator();
             // Act
             int result = calculator.Sum(2,2);
             // Assert
-            //Assert.IsTrue(result == 4);
+            
             Assert.AreEqual(4, result);
         }
     }
