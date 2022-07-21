@@ -23,15 +23,24 @@ namespace atlab
         }
 
         [Test]
-        public void OddNumber_InputOddAndEven_GetTrueOrFalse()
+        public void OddNumberCheck_ReturnTrue()
         {
             // Arrange
             Calculator calculator = new Calculator();
             // Act
             bool oddInput = calculator.IsOddNumber(1);
-            bool evenInput = calculator.IsOddNumber(2);
             // Assert
             Assert.IsTrue(oddInput);
+        }        
+        
+        [Test]
+        public void EvenNumberCheck_ReturnFalse()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            // Act
+            bool evenInput = calculator.IsOddNumber(2);
+            // Assert
             Assert.IsFalse(evenInput);
         }
     }
