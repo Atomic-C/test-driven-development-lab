@@ -34,12 +34,14 @@ namespace atlab
         }        
         
         [Test]
-        public void EvenNumberCheck_ReturnFalse()
+        [TestCase(2)]
+        [TestCase(400)] // When using test cases we can test multiple values
+        public void EvenNumberCheck_ReturnFalse(int a)
         {
             // Arrange
             Calculator calculator = new Calculator();
             // Act
-            bool evenInput = calculator.IsOddNumber(2);
+            bool evenInput = calculator.IsOddNumber(a);
             // Assert
             Assert.IsFalse(evenInput);
         }
