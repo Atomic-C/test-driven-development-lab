@@ -1,4 +1,4 @@
-# test-driven-development-lab #
+# Test Driven Development Lab #
 - Code twice deploy once :D
 
 
@@ -13,7 +13,8 @@
 - User Interface tests, which cover user interface from buttons to substems including database level (slower);
 
 ### Testing Pyramid ###
-- Place image here;
+![testing-pyramid](https://user-images.githubusercontent.com/18576471/180123939-d5769c91-bbbf-4956-9cc6-50ebe2f9ede8.PNG)
+
 
 ### AAA ###
 #### Arrange ####
