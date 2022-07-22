@@ -45,5 +45,16 @@ namespace atlab
             // Assert
             Assert.IsFalse(evenInput);
         }
+
+        [Test]
+        [TestCase(20, ExpectedResult = false)]
+        [TestCase(21, ExpectedResult = true)]
+        public bool IsOddChecker_InputNumberReturnTrueIfOdd(int a)
+        {
+            // Arranje
+            Calculator calculator = new Calculator();
+            // Act
+            return calculator.IsOddNumber(a);
+        }
     }
 }
