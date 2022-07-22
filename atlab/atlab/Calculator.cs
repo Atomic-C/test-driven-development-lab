@@ -8,6 +8,11 @@ namespace atlab
         {
             return a + b;
         }
+        
+        public double SumDouble(double a, double b) 
+        {
+            return a + b;
+        }
 
         public bool IsOddNumber(int a)
         {
