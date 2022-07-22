@@ -23,6 +23,17 @@ namespace atlab
         }
 
         [Test]
+        public void SubtractInputTwoInt_GetCorrectSubtraction()
+        {
+            //Arrange
+            Calculator calculator = new Calculator();
+            //Act
+            int result = calculator.Subtract(50, 25);
+            //Assert
+            Assert.AreEqual(25, result);
+        }
+
+        [Test]
         public void OddNumberCheck_ReturnTrue()
         {
             // Arrange
