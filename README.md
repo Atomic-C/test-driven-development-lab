@@ -10,7 +10,7 @@
 - Bug are caught before deployment and when we deploy, we do it with confidence!;
 - Unit Tests test a single class or small unit of related classes (quick);
 - Integration Tests cover a greater range of the system by testing the application with it's external dependencies like DB CRUD operations(slow);
-- User Interface tests, which cover user interface from buttons to substems including database level (slower);
+- User Interface tests, which cover user interface from buttons to subsystems including database level (slower);
 
 ### Testing Pyramid ###
 ![testing-pyramid](https://user-images.githubusercontent.com/18576471/180123939-d5769c91-bbbf-4956-9cc6-50ebe2f9ede8.PNG)
