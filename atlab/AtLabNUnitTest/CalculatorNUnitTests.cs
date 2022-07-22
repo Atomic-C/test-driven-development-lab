@@ -51,10 +51,23 @@ namespace atlab
         [TestCase(21, ExpectedResult = true)]
         public bool IsOddChecker_InputNumberReturnTrueIfOdd(int a)
         {
-            // Arranje
+            // Arrange
             Calculator calculator = new Calculator();
             // Act
             return calculator.IsOddNumber(a);
+        }
+
+        [Test]
+        [TestCase(20.33,60.33)]
+        [TestCase(40.33,40.33)]
+        public void DoubleSum_InputTwoInt_GetCorrectAdition(double a, double b)
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            // Act
+            double result = calculator.SumDouble(a, b);
+            // Assert
+            Assert.AreEqual(80.66, result, 1);
         }
     }
 }
