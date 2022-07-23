@@ -80,5 +80,17 @@ namespace atlab
             // Assert
             Assert.AreEqual(80.66, result, 1);
         }
+
+        [Test]
+        public void OddRanger_InputMinMaxRange_ReturnValidOddRrange()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            List<int> expectedOddRange = new List<int> { 5, 7, 9 }; // 5-10
+            // Act
+            List<int> result = calculator.GetOddRange(5,10); // 5, 7, 9
+            // Assert
+            Assert.That(result, Is.EquivalentTo(expectedOddRange));
+        }
     }
 }
