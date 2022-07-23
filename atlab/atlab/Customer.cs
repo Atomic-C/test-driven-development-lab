@@ -8,9 +8,11 @@ namespace atlab
 {
     public class Customer
     {
+        public string GreetMessage { get; set; }
         public string CombineCustomerName(string firstName, string secondName)
         {
-            return $@"{firstName} {secondName}";
+            GreetMessage = $@"Hello, {firstName} {secondName}";
+            return GreetMessage;
         }
     }
 }
