@@ -9,6 +9,13 @@ namespace atlab
     public class Customer
     {
         public string GreetMessage { get; set; }
+
+        /// <summary>
+        /// Takes two string inputs, firstName and secondName
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="secondName"></param>
+        /// <returns>firstName, secondName combined with a greeting</returns>
         public string CombineCustomerName(string firstName, string secondName)
         {
             GreetMessage = $@"Hello, {firstName} {secondName}";
