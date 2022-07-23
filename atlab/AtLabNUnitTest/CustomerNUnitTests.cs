@@ -18,13 +18,13 @@ namespace atlab
             // Action
             string fullName = customer.CombineCustomerName("Pedro", "Sousa"); // Stores fullName
             // Assert
-            Assert.That(fullName, Is.EqualTo("Pedro Sousa")); // Checks if fullName Is.EquLTo(the expected full name!)
-            Assert.AreEqual(fullName, "Pedro Sousa"); // This is an alternative to line 21.
+            Assert.That(fullName, Is.EqualTo("Hello, Pedro Sousa")); // Checks if fullName Is.EquLTo(the expected full name!)
+            Assert.AreEqual(fullName, "Hello, Pedro Sousa"); // This is an alternative to line 21.
 
             // Below are some Assert Helper Methods that can be helpful with strings:
 
             Assert.That(fullName, Does.Contain("Pedro"));
-            Assert.That(fullName, Does.StartWith("P"));
+            Assert.That(fullName, Does.StartWith("H"));
             Assert.That(fullName, Does.EndWith("a"));
 
 
@@ -32,6 +32,17 @@ namespace atlab
 
             // Below is a regular expression that can be used with strings, making sure strings start with this pattern: 
             Assert.That(fullName, Does.Match("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]")); 
+        }
+
+        [Test]
+        public void GreetMessage_NotGreeted_ShouldReturnNull()
+        {
+            // Arrange
+            Customer customer = new Customer();
+            // Act
+            // Here we call nothing. We want to check the value of GreetMessage without calls.
+            // Assert
+            Assert.IsNull(customer.GreetMessage);
         }
     }
 }
