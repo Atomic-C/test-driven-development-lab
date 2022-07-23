@@ -10,11 +10,18 @@ namespace atlab
     [TestFixture]
    public  class CustomerNUnitTests
     {
+        private Customer customer;
+        [SetUp]
+        public void Setup() // This works like a constructor and exists to replace Arrange object instantiation.
+        {
+            customer = new Customer();
+        }
+
         [Test]
         public void CombineCustomerName_InputFirstAndLastName_ReturnFfullName()
         {
             // Arrange
-            Customer customer = new Customer();
+            //Customer customer = new Customer();
             // Action
             string fullName = customer.CombineCustomerName("Pedro", "Sousa"); // Stores fullName
             // Assert
@@ -38,7 +45,7 @@ namespace atlab
         public void GreetMessage_NotGreeted_ShouldReturnNull()
         {
             // Arrange
-            Customer customer = new Customer();
+            //Customer customer = new Customer();
             // Act
             // Here we call nothing. We want to check the value of GreetMessage without calls.
             // Assert
