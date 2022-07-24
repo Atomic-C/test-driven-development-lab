@@ -28,6 +28,17 @@ namespace atlab
         {
             return a - b;
         }
+
+        /// <summary>
+        /// Takes two integer values
+        /// </summary>
+        /// <param name="a">First integer</param>
+        /// <param name="b">Second integer</param>
+        /// <returns>The product between a and b</returns>
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
         
         /// <summary>
         /// Takes two double values
