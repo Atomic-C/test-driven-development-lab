@@ -51,5 +51,16 @@ namespace atlab
             // Assert
             Assert.IsNull(customer.GreetMessage);
         }
+
+        [Test]
+        public void DiscountCheckIf_DiscountLimit_IsBetweenRange()
+        {
+            // Arrange
+            int result = customer.Discount;
+            // Act
+
+            // Assert
+            Assert.That(result, Is.InRange(5,30));
+        }
     }
 }

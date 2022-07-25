@@ -8,6 +8,7 @@ namespace atlab
 {
     public class Customer
     {
+        public int Discount = 5;
         public string GreetMessage { get; set; }
 
         /// <summary>
@@ -19,6 +20,7 @@ namespace atlab
         public string CombineCustomerName(string firstName, string secondName)
         {
             GreetMessage = $@"Hello, {firstName} {secondName}";
+            Discount = 20;
             return GreetMessage;
         }
     }
