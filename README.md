@@ -30,6 +30,7 @@
 
 ## Some amazingly useful links ##
 [Git for Professionals](https://www.freecodecamp.org/news/git-for-professionals/) <br>
+[Git for Professionals](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/) <br>
 
 - Hosted at: Coming soon™;
 
