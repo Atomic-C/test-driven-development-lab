@@ -87,10 +87,23 @@ namespace atlab
             // Arrange
             Calculator calculator = new Calculator();
             List<int> expectedOddRange = new List<int> { 5, 7, 9 }; // 5-10
+            List<int> expectedOddRange2 = new List<int> { 0, 0, 0 }; // 5-8 for testing test purposes
             // Act
             List<int> result = calculator.GetOddRange(5,10); // 5, 7, 9
             // Assert
             Assert.That(result, Is.EquivalentTo(expectedOddRange));
+            // Assert.AreEqual(expectedOddRange, result); // This is the same as line 93
+            Assert.Contains(9,result);
+            Assert.That(result, Does.Contain(9));
+            Assert.That(result, Is.Not.Empty);
+            Assert.That(result.Count, Is.EqualTo(3));
+            Assert.That(result, Has.No.Member(8));
+            Assert.That(result, Is.Ordered);
+            Assert.That(result, Is.Ordered.Ascending);
+            Assert.That(result, Is.Unique);
+            Assert.That(result, Has.Count.GreaterThan(1));
+            Assert.That(result, Has.All.Positive);
+            Assert.That(result, Contains.Item(5));
         }
     }
 }
