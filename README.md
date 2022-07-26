@@ -32,6 +32,7 @@
 [Git for Professionals](https://www.freecodecamp.org/news/git-for-professionals/) <br>
 [XML Cocumentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/) <br>
 [What is CI/CD](https://www.pagerduty.com/resources/learn/what-is-ci-cd-environment/#:~:text=A%20CI%2FCD%20environment%20is,testing%2C%20and%20deployment%20and%20delivery.) <br>
+[NUnit Assert Examples - How to Use?](https://dotnetpattern.com/nunit-assert-examples/) <br>
 
 - Hosted at: Coming soon™;
 
