@@ -10,11 +10,20 @@ namespace atlab
     [TestFixture]
     class CalculatorNUnitTests
     {
+        private Calculator calculator;
+
+        //https://stackoverflow.com/questions/212718/when-do-i-use-the-testfixturesetup-attribute-instead-of-a-default-constructor
+        [SetUp]
+        public void Setup() // This works like a constructor and exists to replace Arrange object instantiation.
+        {
+            calculator = new Calculator();
+        }
+
         [Test]
         public void Sum_InputTwoInt_GetCorrectAdition()
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             // Act
             int result = calculator.Sum(2, 2);
             // Assert
@@ -26,7 +35,7 @@ namespace atlab
         public void SubtractInputTwoInt_GetCorrectSubtraction()
         {
             //Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             //Act
             int result = calculator.Subtract(50, 25);
             //Assert
@@ -37,7 +46,7 @@ namespace atlab
         public void OddNumberCheck_ReturnTrue()
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             // Act
             bool oddInput = calculator.IsOddNumber(1);
             // Assert
@@ -50,7 +59,7 @@ namespace atlab
         public void EvenNumberCheck_ReturnFalse(int a)
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             // Act
             bool evenInput = calculator.IsOddNumber(a);
             // Assert
@@ -63,7 +72,7 @@ namespace atlab
         public bool IsOddChecker_InputNumberReturnTrueIfOdd(int a)
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             // Act
             return calculator.IsOddNumber(a);
         }
@@ -74,7 +83,7 @@ namespace atlab
         public void DoubleSum_InputTwoInt_GetCorrectAdition(double a, double b)
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             // Act
             double result = calculator.SumDouble(a, b);
             // Assert
@@ -85,7 +94,7 @@ namespace atlab
         public void OddRanger_InputMinMaxRange_ReturnValidOddRrange()
         {
             // Arrange
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator(); // Because we instantiate on Setup()
             List<int> expectedOddRange = new List<int> { 5, 7, 9 }; // 5-10
             List<int> expectedOddRange2 = new List<int> { 0, 0, 0 }; // 5-8 for testing test purposes
             // Act
