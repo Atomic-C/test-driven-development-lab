@@ -49,7 +49,7 @@ namespace atlab
         public void GreetMessage_NotGreeted_ShouldReturnNull()
         {
             // Arrange
-            //Customer customer = new Customer();
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
             // Act
             // Here we call nothing. We want to check the value of GreetMessage without calls.
             // Assert
@@ -60,11 +60,37 @@ namespace atlab
         public void DiscountCheckIf_DiscountLimit_IsBetweenRange()
         {
             // Arrange
-            int result = customer.Discount;
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
             // Act
+            int result = customer.Discount;
 
             // Assert
             Assert.That(result, Is.InRange(5,30));
+        }
+
+        [Test]
+        public void GreetMessage_GreetedWithoutLastName_ReturnsNotNull()
+        {
+            // Arrange
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
+            // Act
+            customer.CombineCustomerName("John","");
+            // Assert
+            Assert.IsNotNull(customer.GreetMessage);
+            Assert.IsFalse(string.IsNullOrEmpty(customer.GreetMessage));
+        }
+
+        [Test]
+        public void GreetChecker_EmptyFirstName_ThrowsException()
+        {
+            // Arrange
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
+            // Act
+            var exceptionDetails = Assert.Throws<ArgumentException>(() => customer.CombineCustomerName(" ", "AppleSeed"));
+            // Assert
+            Assert.AreEqual("firstName is empty or null", exceptionDetails.Message);
+
+            Assert.That(() => customer.CombineCustomerName("", "Sousa"), Throws.ArgumentException.With.Message.EqualTo("firstName is empty or null")); // This is the Syntax for .That
         }
     }
 }

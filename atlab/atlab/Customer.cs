@@ -14,11 +14,16 @@ namespace atlab
         /// <summary>
         /// Takes two string inputs, firstName and secondName
         /// </summary>
-        /// <param name="firstName"></param>
-        /// <param name="secondName"></param>
+        /// <param name="firstName">First string</param>
+        /// <param name="secondName">Second string</param>
         /// <returns>firstName, secondName combined with a greeting</returns>
         public string CombineCustomerName(string firstName, string secondName)
         {
+            if (string.IsNullOrWhiteSpace(firstName))
+            {
+                throw new ArgumentException("firstName is empty or null");
+            }
+
             GreetMessage = $@"Hello, {firstName} {secondName}";
             Discount = 20;
             return GreetMessage;
