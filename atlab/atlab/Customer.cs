@@ -9,6 +9,7 @@ namespace atlab
     public class Customer
     {
         public int Discount = 5;
+        public int OrderTotal { get; set; }
         public string GreetMessage { get; set; }
 
         /// <summary>
@@ -28,5 +29,25 @@ namespace atlab
             Discount = 20;
             return GreetMessage;
         }
+
+        /// <summary>
+        /// Call this method to find more about customer details.
+        /// </summary>
+        /// <returns>Type of Customer Account</returns>
+        public CustomerType GetCustomerDetails()
+        {
+            if (OrderTotal < 100)
+            {
+                return new FreemiumCustomer();
+            }
+            else
+            {
+                return new PremiumCustomer();
+            }
+        }
     }
+
+        public class CustomerType{}
+        public class FreemiumCustomer : CustomerType {}
+        public class PremiumCustomer : CustomerType {}
 }

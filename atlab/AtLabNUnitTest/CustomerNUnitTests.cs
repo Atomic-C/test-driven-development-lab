@@ -92,5 +92,29 @@ namespace atlab
 
             Assert.That(() => customer.CombineCustomerName("", "Sousa"), Throws.ArgumentException.With.Message.EqualTo("firstName is empty or null")); // This is the Syntax for .That
         }
+
+        [Test]
+        public void CreateCustomerWithLessThan100Orders_ReturnFreemiumCustomerType()
+        {
+            // Arrange
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
+            // Act
+            customer.OrderTotal = 50;
+            CustomerType customerDetails = customer.GetCustomerDetails();
+            // Assert
+            Assert.That(customerDetails, Is.TypeOf<FreemiumCustomer>());
+        }     
+        
+        [Test]
+        public void CreateCustomerWithMoreThan100Orders_ReturnFreemiumCustomerType()
+        {
+            // Arrange
+            //Customer customer = new Customer(); // Because we instantiate on Setup()
+            // Act
+            customer.OrderTotal = 500;
+            CustomerType customerDetails = customer.GetCustomerDetails();
+            // Assert
+            Assert.That(customerDetails, Is.TypeOf<PremiumCustomer>());
+        }
     }
 }
