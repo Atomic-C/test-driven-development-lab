@@ -81,8 +81,8 @@ namespace atlab
             // Arrange
             //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
             // Act
-            int scoreResult = score;
-            int attendanceResult = attendanceScore;
+            gradingCalculator.Score = score;
+            gradingCalculator.AttendancePercentage = attendanceScore;
             string gradeResult = gradingCalculator.GetGrade();
             // Assert
             Assert.That(gradeResult, Is.EqualTo("F"));
