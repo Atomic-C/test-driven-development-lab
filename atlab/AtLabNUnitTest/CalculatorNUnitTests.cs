@@ -80,7 +80,7 @@ namespace atlab
         [Test]
         [TestCase(20.33,60.33)]
         [TestCase(40.33,40.33)]
-        public void DoubleSum_InputTwoInt_GetCorrectAdition(double a, double b)
+        public void DoubleSum_InputTwoInt_GetCorrectAddition(double a, double b)
         {
             // Arrange
             //Calculator calculator = new Calculator(); // Because we instantiate on Setup()

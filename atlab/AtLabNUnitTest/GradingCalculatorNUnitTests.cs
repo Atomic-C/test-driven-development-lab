@@ -87,5 +87,25 @@ namespace atlab
             // Assert
             Assert.That(gradeResult, Is.EqualTo("F"));
         }
+
+        [Test]
+        [TestCase(95,90, ExpectedResult = "A")]
+        [TestCase(85,90, ExpectedResult = "B")]
+        [TestCase(65,90, ExpectedResult = "C")]
+        [TestCase(95,65, ExpectedResult = "B")]
+        [TestCase(95,55, ExpectedResult = "F")]
+        [TestCase(65,55, ExpectedResult = "F")]
+        [TestCase(50,90, ExpectedResult = "F")]
+        public string GetGrade_InputMultiple_Return_Grades(int score, int attendanceScore)
+        {
+            // Arrange
+            //GradingCalculator Calculator = new GradingCalculator(); // Already instantiated on Setup()
+            // Act
+            gradingCalculator.Score = score;
+            gradingCalculator.AttendancePercentage = attendanceScore;
+            return gradingCalculator.GetGrade();
+            // Assert
+            // Already done in the TestCases above class
+        }
     }
 }
