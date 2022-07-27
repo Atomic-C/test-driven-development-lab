@@ -73,8 +73,8 @@ namespace atlab
         {
             // Arrange
             //Customer customer = new Customer(); // Because we instantiate on Setup()
-            // Act
             customer.CombineCustomerName("John","");
+            // Act
             // Assert
             Assert.IsNotNull(customer.GreetMessage);
             Assert.IsFalse(string.IsNullOrEmpty(customer.GreetMessage));
@@ -98,8 +98,8 @@ namespace atlab
         {
             // Arrange
             //Customer customer = new Customer(); // Because we instantiate on Setup()
-            // Act
             customer.OrderTotal = 50;
+            // Act
             CustomerType customerDetails = customer.GetCustomerDetails();
             // Assert
             Assert.That(customerDetails, Is.TypeOf<FreemiumCustomer>());
@@ -110,8 +110,8 @@ namespace atlab
         {
             // Arrange
             //Customer customer = new Customer(); // Because we instantiate on Setup()
-            // Act
             customer.OrderTotal = 500;
+            // Act
             CustomerType customerDetails = customer.GetCustomerDetails();
             // Assert
             Assert.That(customerDetails, Is.TypeOf<PremiumCustomer>());

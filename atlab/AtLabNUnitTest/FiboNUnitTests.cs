@@ -23,8 +23,8 @@ namespace atlab
         {
             // Arrange
             // Fibo fibo = new Fibo(); // We already instantiated on Setup()
-            // Act
             fibo.Range = 1;
+            // Act
             List<int> fiboResult = fibo.GetFiboSeries();
             List<int> fiboExpectedResult = new List<int>() { 0 };
 
