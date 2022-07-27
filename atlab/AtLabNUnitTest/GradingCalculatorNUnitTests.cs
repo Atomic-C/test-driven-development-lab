@@ -18,14 +18,14 @@ namespace atlab
         }
 
         [Test]
-        public void Score95AndAttendance90_ReturnA()
+        public void GetGrade_Score95_Attendance90_ReturnGradeA()
         {
             {
                 // Arrange
                 //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
                 // Act
-                int scoreResult = gradingCalculator.Score = 95;
-                int attendanceResult = gradingCalculator.AttendancePercentage = 90;
+                gradingCalculator.Score = 95;
+                gradingCalculator.AttendancePercentage = 90;
                 string gradeResult = gradingCalculator.GetGrade();
                 // Assert
                 Assert.That(gradeResult, Is.EqualTo("A"));
@@ -34,39 +34,39 @@ namespace atlab
         }
 
         [Test]
-        public void Score85AndAttendance90_ReturbB()
+        public void GetGrade_Score85_Attendance90_ReturnGradeB()
         {
             // Arrange
             //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
             // Act
-            int scoreResult = gradingCalculator.Score = 85;
-            int attendanceResult = gradingCalculator.AttendancePercentage = 90;
+            gradingCalculator.Score = 85;
+            gradingCalculator.AttendancePercentage = 90;
             string gradeResult = gradingCalculator.GetGrade();
             // Assert
             Assert.That(gradeResult, Is.EqualTo("B"));
         }
 
         [Test]
-        public void Score65AndAttendance90_ReturnC()
+        public void GetGrade_Score65_Attendance90_ReturnGradeC()
         {
             // Arrange
             //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
             // Act
-            int scoreResult = gradingCalculator.Score = 65;
-            int attendanceResult = gradingCalculator.AttendancePercentage = 90;
+            gradingCalculator.Score = 65;
+            gradingCalculator.AttendancePercentage = 90;
             string gradeResult = gradingCalculator.GetGrade();
             // Assert
             Assert.That(gradeResult, Is.EqualTo("C"));
         }
 
         [Test]
-        public void Score95AndAttendance65_ReturnB()
+        public void GetGrade_Score95_Attendance65_ReturnGradeB()
         {
             // Arrange
             //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
             // Act
-            int scoreResult = gradingCalculator.Score = 95;
-            int attendanceResult = gradingCalculator.AttendancePercentage = 65;
+            gradingCalculator.Score = 95;
+            gradingCalculator.AttendancePercentage = 65;
             string gradeResult = gradingCalculator.GetGrade();
             // Assert
             Assert.That(gradeResult, Is.EqualTo("B"));
@@ -76,7 +76,7 @@ namespace atlab
         [TestCase(95,55)]
         [TestCase(65,55)]
         [TestCase(50,90)]
-        public void Score95_65_50_Attendance55_55_90_ReturnF(int score, int attendanceScore)
+        public void GetGrade_Score95_65_50_Attendance55_55_90_ReturnGradeF(int score, int attendanceScore)
         {
             // Arrange
             //GradingCalculator Calculator = new GradingCalculator(); // Because we instantiate on Setup()
