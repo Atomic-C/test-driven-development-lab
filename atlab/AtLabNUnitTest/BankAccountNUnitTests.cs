@@ -15,7 +15,7 @@ namespace atlab
         [SetUp]
         public void Setup()
         {
-            bankAccount = new BankAccount(new LogBook());
+            bankAccount = new BankAccount(new DummyLogBook());
         }
 
         [Test]
