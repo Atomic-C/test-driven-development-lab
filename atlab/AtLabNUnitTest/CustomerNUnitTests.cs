@@ -18,13 +18,16 @@ namespace atlab
         }
 
         [Test]
-        public void CombineCustomerName_InputFirstAndLastName_ReturnFfullName()
+        [TestCase("Pedro", "Sousa")]
+        [TestCase("Pedro", "Sousa")]
+        [TestCase("Pedro", "Sousa")]
+        public void CombineCustomerName_InputFirstAndLastName_ReturnFfullName(string firstName, string secondName)
         {
             // Arrange
             //Customer customer = new Customer();
             // Action
-            string fullName = customer.CombineCustomerName("Pedro", "Sousa"); // Stores fullName
-                                                                              // Assert
+            string fullName = customer.CombineCustomerName(firstName, secondName); // Stores fullName
+            // Assert
 
             Assert.Multiple(() => // This enables multiple errors to show up, that won't without this Multiple method.
             {
