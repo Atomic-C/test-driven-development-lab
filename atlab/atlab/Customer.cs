@@ -11,6 +11,11 @@ namespace atlab
         public int Discount = 5;
         public int OrderTotal { get; set; }
         public string GreetMessage { get; set; }
+        public bool IsPlatinum { get; set; }
+        public Customer()
+        {
+            IsPlatinum = false;
+        }
 
         /// <summary>
         /// Takes two string inputs, firstName and secondName
