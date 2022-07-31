@@ -15,14 +15,16 @@ namespace atlab
         [SetUp]
         public void Setup()
         {
-            Product = new Product() { Price = 500 };
-            Customer = new Customer() { IsPlatinum = true };
         }
         [Test]
-        public void GetPrice_ReturnPriceForPremium()
+        public void GetPrice_InputPremiumCustomer_ReturnPriceForPremiumCustomer()
         {
+            // Arrange
+            Product = new Product() { Price = 500 };
+            Customer = new Customer() { IsPlatinum = true };
+            // Act
             var result = Product.GetPrice(Customer);
-
+            // Assert 
             Assert.That(result, Is.EqualTo(400));
         }
     }

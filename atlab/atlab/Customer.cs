@@ -6,24 +6,37 @@ using System.Threading.Tasks;
 
 namespace atlab
 {
-    public class Customer
+    public interface ICustomer
     {
-        public int Discount = 5;
+        int Discount { get; set; }
+        int OrderTotal { get; set; }
+        string GreetMessage { get; set; }
+        bool IsPlatinum { get; set; }
+        string CombineCustomerName(string firstName, string secondName);
+        CustomerType GetCustomerDetails();
+    }
+
+    public class Customer : ICustomer
+    {
+        public int Discount { get; set; }
         public int OrderTotal { get; set; }
         public string GreetMessage { get; set; }
         public bool IsPlatinum { get; set; }
+
+
         public Customer()
         {
+            Discount = 5;
             IsPlatinum = false;
         }
 
-        /// <summary>
-        /// Takes two string inputs, firstName and secondName
-        /// </summary>
-        /// <param name="firstName">First string</param>
-        /// <param name="secondName">Second string</param>
-        /// <returns>firstName, secondName combined with a greeting</returns>
-        public string CombineCustomerName(string firstName, string secondName)
+            /// <summary>
+            /// Takes two string inputs, firstName and secondName
+            /// </summary>
+            /// <param name="firstName">First string</param>
+            /// <param name="secondName">Second string</param>
+            /// <returns>firstName, secondName combined with a greeting</returns>
+            public string CombineCustomerName(string firstName, string secondName)
         {
             if (string.IsNullOrWhiteSpace(firstName))
             {
