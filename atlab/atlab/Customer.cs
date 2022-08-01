@@ -11,7 +11,7 @@ namespace atlab
         int Discount { get; set; }
         int OrderTotal { get; set; }
         string GreetMessage { get; set; }
-        bool IsPlatinum { get; set; }
+        bool IsPremium { get; set; }
         string CombineCustomerName(string firstName, string secondName);
         CustomerType GetCustomerDetails();
     }
@@ -21,13 +21,13 @@ namespace atlab
         public int Discount { get; set; }
         public int OrderTotal { get; set; }
         public string GreetMessage { get; set; }
-        public bool IsPlatinum { get; set; }
+        public bool IsPremium { get; set; }
 
 
         public Customer()
         {
             Discount = 5;
-            IsPlatinum = false;
+            IsPremium = false;
         }
 
             /// <summary>

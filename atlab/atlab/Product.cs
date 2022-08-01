@@ -12,9 +12,23 @@ namespace atlab
         public string Name { get; set; }
         public double Price { get; set; }
 
+        /// <summary>
+        /// Insert Customer
+        /// </summary>
+        /// <param name="customer">customer</param>
+        /// <returns>The price with discount if applicable</returns>
         public double GetPrice(Customer customer)
         {
-            if (customer.IsPlatinum)
+            if (customer.IsPremium)
+            {
+                return Price * 0.8;
+            }
+            return Price;
+        }        
+        
+        public double GetPrice(ICustomer customer)
+        {
+            if (customer.IsPremium)
             {
                 return Price * 0.8;
             }
